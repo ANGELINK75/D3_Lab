@@ -7,6 +7,7 @@ var chartHeight = 400;
 var margin = {top: 10, right: 10, bottom: 100, left:100};
 
 var flag = true;
+var t = d3.transition().duration(750);
 var svg = d3.select("#chart-area").append("svg").attr("width", (chartWidth + margin.right + margin.left) )
                                                 .attr("height", (chartHeight + margin.top + margin.bottom) );
 
@@ -31,9 +32,11 @@ d3.json("data/revenues.json").then((data)=> {
 	});
 
     d3.interval( ( ) => { update(data);
+        var newData = flag ? data : data.slice(1);
+		update(newData);
         flag = !flag;
 	}, 1000);
-    update(data);
+    update(flag ? data : data.slice(1));
 
 }).catch((error)=> {
     console.log(error);
@@ -51,17 +54,17 @@ function update(data) {
                                             .attr("text-anchor", "middle").attr("transform", "rotate(-10)");
 
     var yAxis= d3.axisLeft(y).ticks(5).tickFormat( (d) => {return "$" + d/1000 + "k"} );
-    yAxisGroup.call(yAxis);
+    yAxisGroup.transition(t).call(yAxis);
 
     graph.append("text").attr("class", "x axis-label").attr("x", (chartWidth / 2)).attr("y", chartHeight + 140).attr("font-size", "24px")
                     .attr("text-anchor", "middle").attr("transform", "translate(0, -50)").text("Month");
 
 
-    var label = flag ? "Revenue" : "Profit";
-    yAxisLabel.text(label)
+    var yLabel = flag ? "Revenue" : "Profit";
+    yAxisLabel.text(yLabel)
 
-    var bars = graph.selectAll("rect").data(data);
-    bars.exit().remove();
+    var bars = graph.selectAll("rect").data(data, (d) => { return d.month; });
+    bars.exit().transition(t).attr("y", y(0)).attr("height", 0).remove();
 
     bars.attr("x", (d) => { return x(d.month); })
 	    .attr("y", (d) => { return y(d[value]); })
@@ -71,9 +74,16 @@ function update(data) {
     bars.enter()
         .append("rect")
             .attr("x", (d) => { return x(d.month); })
-            .attr("y", (d) => { return y(d[value]); })
-            .attr("height", (d) => { return chartHeight - y(d[value]); })
+            .attr("y", chartHeight)
+            .attr("height", 0)
             .attr("width", x.bandwidth())
-            .attr("fill", "yellow");
+            .attr("fill", "yellow")
+            .merge(bars)
+            .transition(t)
+                .attr("x", (d) => { return x(d.month) })
+                .attr("y", (d) => { return y(d[value]); })
+                .attr("width", x.bandwidth)
+                .attr("height", (d) => { return chartHeight - y(d[value]); })
+                .attr("fill", ()=>{ return flag ? "yellow" : "orange"; });
 
 }

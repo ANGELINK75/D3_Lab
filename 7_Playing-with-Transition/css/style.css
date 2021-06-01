@@ -1,0 +1,32 @@
+#chart-area svg {
+	margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#logo {
+	height:50px;
+}
+
+.navbar-brand {
+	height: 60px;
+	padding: 5px 0px;
+}
+
+body{
+    background-color: black;
+}
+
+path.domain  {
+    stroke: white;
+}
+.tick text {
+    font: 18px Arial;
+    fill: white;
+}
+line {
+    stroke: white;
+}
+text {
+    fill: white;
+}

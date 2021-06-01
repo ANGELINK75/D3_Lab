@@ -68,7 +68,7 @@ d3.json("data/example.json").then((data) => {
 
     // Add line to chart
     // TODO: add line path
-    g.append("path").attr("class", "line").attr("fill", "white").attr("stroke", "red").attr("stroke-with", "5px").attr("d", line(data));
+    g.append("path").attr("class", "line").attr("fill", "red").attr("stroke", "red").attr("stroke-with", "5px").attr("d", line(data));
 
     /******************************** Tooltip Code ********************************/
 

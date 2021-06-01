@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="136e815d-6081-437c-8a83-54c280e8c738" name="Default Changelist" comment="6_Simulating-Update-Events">
+    <list default="true" id="136e815d-6081-437c-8a83-54c280e8c738" name="Default Changelist" comment="7_Playing-with-Transition">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/6_Simulating-Update-Events/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/6_Simulating-Update-Events/js/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +80,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622527923918</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="7_Playing-with-Transition">
+      <created>1622529110825</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1622529110825</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -102,6 +108,7 @@
     <MESSAGE value="5_Margins-Groups-Axes-and-Labels" />
     <MESSAGE value="P1_Star-Lion-Brewery" />
     <MESSAGE value="6_Simulating-Update-Events" />
-    <option name="LAST_COMMIT_MESSAGE" value="6_Simulating-Update-Events" />
+    <MESSAGE value="7_Playing-with-Transition" />
+    <option name="LAST_COMMIT_MESSAGE" value="7_Playing-with-Transition" />
   </component>
 </project>

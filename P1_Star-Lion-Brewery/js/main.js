@@ -31,9 +31,9 @@ d3.json("data/revenues.json").then((data)=> {
 
     var xAxis = d3.axisBottom(x);
     graph.append("g").attr("class", "bottom axis").attr("transform", "translate(0, " + chartHeight + ")").call(xAxis)
-                .selectAll("text").attr("y", "15").attr("x", "0").attr("text-anchor", "middle").attr("transform", "rotate(-30)");
+                .selectAll("text").attr("y", "15").attr("x", "0").attr("text-anchor", "middle");
 
-    var yAxis= d3.axisLeft(y).ticks(5).tickFormat( (d) => {return "$" + d/10000 + "k"} );
+    var yAxis= d3.axisLeft(y).ticks(5).tickFormat( (d) => {return "$" + d/1000 + "k"} );
     graph.append("g").attr("class", "left axis").call(yAxis);
 
     g.append("text").attr("class", "x axis-label").attr("x", (chartWidth / 2)).attr("y", chartHeight + 140).attr("font-size", "24px")

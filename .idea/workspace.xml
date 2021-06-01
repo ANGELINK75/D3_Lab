@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="136e815d-6081-437c-8a83-54c280e8c738" name="Default Changelist" comment="5_Margins-Groups-Axes-and-Labels">
+    <list default="true" id="136e815d-6081-437c-8a83-54c280e8c738" name="Default Changelist" comment="P1_Star-Lion-Brewery">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P1_Star-Lion-Brewery/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/P1_Star-Lion-Brewery/js/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +60,21 @@
       <option name="project" value="LOCAL" />
       <updated>1622524232665</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="P1_Star-Lion-Brewery">
+      <created>1622525918181</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1622525918181</updated>
+    </task>
+    <task id="LOCAL-00006" summary="P1_Star-Lion-Brewery">
+      <created>1622525922879</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1622525922879</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -78,6 +93,7 @@
     <MESSAGE value="4 and C1" />
     <MESSAGE value="5" />
     <MESSAGE value="5_Margins-Groups-Axes-and-Labels" />
-    <option name="LAST_COMMIT_MESSAGE" value="5_Margins-Groups-Axes-and-Labels" />
+    <MESSAGE value="P1_Star-Lion-Brewery" />
+    <option name="LAST_COMMIT_MESSAGE" value="P1_Star-Lion-Brewery" />
   </component>
 </project>
